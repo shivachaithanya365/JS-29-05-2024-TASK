@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-TAGS</title>
+    <style>
+        body {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+            margin-left: 25%;
+        }
+        .source {
+            white-space: pre-wrap;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-left: -32%;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 style="margin-left: -10%">-------RETRIEVING TAGS USING DOM & PERFORM ITERATION,CONCATENATION -------</h3>
+
+    <h3 style="margin-left: 23%;">----TAGS----</h3>
+    <h1>HELLO SHIVA CHAITHANYA - 1</h1>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+        officiis porro voluptas quae - 1
+    </p>
+
+    <pre>
+    var a = 10;
+    var b = 20;
+    </pre>
+
+    <h3 style="margin-left: 17%;">----TAGS WITH CLASS----</h3>
+
+    <h1 class="elementClass">HELLO SHIVA CHAITHANYA - 2</h1>
+    <p class="elementClass">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+        officiis porro voluptas quae - 2
+    </p>
+
+    <pre class="elementClass">
+        var a = 10;
+        var b = 20;
+    </pre>
+
+    <h3 style="margin-left: 19%;">----TAGS WITH ID----</h3>
+    <h1 id="elementId1">HELLO SHIVA CHAITHANYA - 3</h1>
+
+    <p id="elementId2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+        officiis porro voluptas quae - 3
+    </p>
+
+    <pre id="elementId3">
+    var a = 10;
+    var b = 20;
+    </pre>
+
+    <h3 style="margin-left: 27%;">SOURCE CODE :</h3>
+    <div class="source">
+        console.log(document.getElementsByTagName("h1"));
+        console.log(document.getElementsByTagName("p"));
+        console.log(document.getElementsByTagName("pre"));
+
+        var x = document.getElementsByTagName("h1");
+        console.log(x[1]);
+
+        var y = document.getElementsByTagName("p");
+        console.log(y[2]);
+        
+        let h1Elements = document.getElementsByTagName("h1");
+        for (i = 0; i < h1Elements.length; i++) {
+            console.log(`innerText of < h1 > tag ${i} :${h1Elements[i].innerText}`);
+        }
+
+        let pElements = document.getElementsByTagName("p");
+        for (i = 0; i < pElements.length; i++) {
+            console.log(`innerText of < p > tag ${i} :${pElements[i].innerText}`);
+        }
+
+        let preElements = document.getElementsByTagName("pre");
+        for (i = 0; i < preElements.length; i++) {
+            console.log(`innerText of < pre > tag ${i} :${preElements[i].innerText}`);
+        }
+
+        let h1ElementsConcat = document.getElementsByTagName("h1");
+        let conc = "";
+        for (i = 0; i < h1ElementsConcat.length; i++) {
+            conc += h1ElementsConcat[i].innerText + " ";
+        }
+        console.log(`concatenation of the innerText of < h1 > tags :${conc}`)
+
+        let pElementsConcat = document.getElementsByTagName("p");
+        let conc2 = "";
+        for (i = 0; i < pElementsConcat.length; i++) {
+            conc2 += pElementsConcat[i].innerText + " ";
+        }
+        console.log(`concatenation of the innerText of < p > tags :${conc2}`)
+
+        console.log(document);
+    </div>
+
+    <script>
+        console.log(document.getElementsByTagName("h1"));
+        console.log(document.getElementsByTagName("p"));
+        console.log(document.getElementsByTagName("pre"));
+
+        var x = document.getElementsByTagName("h1");
+        console.log(x[1]);
+
+        var y = document.getElementsByTagName("p");
+        console.log(y[2]);
+
+        let h1Elements = document.getElementsByTagName("h1");
+        for (i = 0; i < h1Elements.length; i++) {
+            console.log(`innerText of <h1> tag ${i} :${h1Elements[i].innerText}`);
+        }
+
+        let pElements = document.getElementsByTagName("p");
+        for (i = 0; i < pElements.length; i++) {
+            console.log(`innerText of <p> tag ${i} :${pElements[i].innerText}`);
+        }
+
+        let preElements = document.getElementsByTagName("pre");
+        for (i = 0; i < preElements.length; i++) {
+            console.log(`innerText of <pre> tag ${i} :${preElements[i].innerText}`);
+        }
+
+        let h1ElementsConcat = document.getElementsByTagName("h1");
+        let conc = "";
+        for (i = 0; i < h1ElementsConcat.length; i++) {
+            conc += h1ElementsConcat[i].innerText + " ";
+        }
+        console.log(`concatenation of the innerText of <h1> tags :${conc}`)
+
+        let pElementsConcat = document.getElementsByTagName("p");
+        let conc2 = "";
+        for (i = 0; i < pElementsConcat.length; i++) {
+            conc2 += pElementsConcat[i].innerText + " ";
+        }
+        console.log(`concatenation of the innerText of <p> tags :${conc2}`)
+
+        console.log(document);
+
+    </script>
+</body>
+
+</html>

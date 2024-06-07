@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-QUERYSELECTOR</title>
+    <style>
+        body {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+            margin-left: 25%;
+        }
+        .source {
+            white-space: pre-wrap;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-left: -32%;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 style="margin-left: -2%">-------RETRIEVING USING DOM(USING QUERYSELECTOR)-------</h3>
+
+    <h3 style="margin-left: 23%;">----TAGS----</h3>
+    <h1>HELLO SHIVA CHAITHANYA</h1>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+        officiis porro voluptas quae
+    </p>
+
+    <pre>
+    var a = 10;
+    var b = 20;
+    </pre>
+
+    <h3 style="margin-left: 17%;">----TAGS WITH CLASS----</h3>
+
+    <h1 class="elementClass">HELLO SHIVA CHAITHANYA</h1>
+    <p class="elementClass">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+        officiis porro voluptas quae
+    </p>
+
+    <pre class="elementClass">
+        var a = 10;
+        var b = 20;
+    </pre>
+
+    <h3 style="margin-left: 19%;">----TAGS WITH ID----</h3>
+    <h1 id="elementId">HELLO SHIVA CHAITHANYA</h1>
+
+    <p id="elementId2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+        officiis porro voluptas quae
+    </p>
+
+    <pre id="elementId3">
+    var a = 10;
+    var b = 20;
+    </pre>
+    <h3 style="margin-left: 27%;">SOURCE CODE</h3>
+    <div class="source">
+        console.log(document.querySelector("h1"));
+        console.log(document.querySelector(".elementClass"));
+        console.log(document.querySelector("#elementId"));
+
+        console.log(document);   
+    </div>
+    <script>
+        console.log(document.querySelector("h1"));
+        console.log(document.querySelector(".elementClass"));
+        console.log(document.querySelector("#elementId"));
+
+        console.log(document);
+    </script>
+</body>
+
+</html>

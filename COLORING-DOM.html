@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLORING-DOM</title>
+    <style>
+        .source {
+            white-space: pre-wrap;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3 style="text-align: center;">----------ADDING COLORS TO TAGS USING DOM----------</h2>
+        <h1>SHIVA CHAITHANYA</h1>
+        <h1>SHIVA CHAITHANYA</h1>
+        <h1>SHIVA CHAITHANYA</h1>
+
+        <h3 style="text-align: center;">----------DISPLAYING EVEN NUMBERS IN RED AND ODD NUMBERS IN BLUE USING
+            DOM----------</h2>
+            <h2>1</h2>
+            <h2>2</h2>
+            <h2>3</h2>
+            <h2>4</h2>
+            <h2>5</h2>
+            <h2>6</h2>
+            <h2>7</h2>
+            <h2>8</h2>
+            <h2>9</h2>
+            <h2>10</h2>
+
+            <h3 style="margin-left: 44%;">SOURCE CODE :</h3>
+            <div class="source">
+                    var a = document.getElementsByTagName("h1");
+                    for (var i = 0; i < a.length; i++) {
+                        a[i].style.textAlign = "center";
+                    }
+                    a[0].style.color = "red";
+                    a[1].style.color = "green";
+                    a[2].style.color = "blue";
+
+                    var h2 = document.getElementsByTagName("h2");
+
+                    for (i = 0; i < h2.length; i++) {
+                        var num = h2[i].innerText
+                        h2[i].style.textAlign = "center";
+
+                        if (num % 2 == 0) {
+                            h2[i].style.color = "red";
+                        }
+                        else {
+                            h2[i].style.color = "blue";
+                        }
+                    }
+            </div>
+
+            <script>
+                var a = document.getElementsByTagName("h1");
+                for (var i = 0; i < a.length; i++) {
+                    a[i].style.textAlign = "center";
+                }
+                a[0].style.color = "red";
+                a[1].style.color = "green";
+                a[2].style.color = "blue";
+
+                var h2 = document.getElementsByTagName("h2");
+
+                for (i = 0; i < h2.length; i++) {
+                    var num = h2[i].innerText
+                    h2[i].style.textAlign = "center";
+
+                    if (num % 2 == 0) {
+                        h2[i].style.color = "red";
+                    }
+                    else {
+                        h2[i].style.color = "blue";
+                    }
+                }
+            </script>
+</body>
+
+</html>
